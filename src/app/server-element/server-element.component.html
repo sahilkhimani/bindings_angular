@@ -1,7 +1,7 @@
-<div class="row pt-3">
-    <ul class="list-group pb-3">
-      <div class="list-group-item bg-dark" style="color : white">{{ element.type }}</div>
-      <div class="list-group-item" [ngStyle]="{'color' : (element.type == 'server') ? 'red' : 'blue'}">{{ element.name }}</div>
-      <div class="list-group-item p-4">{{ element.content }}</div>  
+<div class="row mt-3">
+    <ul class="list-group mb-2">
+       <li class="list-group-item bg-dark">{{ element.type }}</li>
+       <li class="list-group-item" [ngStyle]="{color : (element.type == 'server') ? 'red' : 'blue'}">{{ element.name }}</li>
+       <li class="list-group-item">{{ element.content }}</li>
     </ul>
-  </div>
+</div>

@@ -7,24 +7,24 @@ import { Component, Input } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bindingProject';
+  serverElements: [{ type: string, name: string, content: string }] = [{ type: 'blueprint', name: 'First Server', content: 'My blueprint server' }];
 
-  serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test!'}];
-
-  onServerCreated(data:{serverName : string, serverContent : string}){
-    this.serverElements.push({
-      type: 'server',
-      name: data.serverName,
-      content: data.serverContent
-    });
+  serverCreated(data: { serverName: string, serverContent: string }) {
+    this.serverElements.push(
+      {
+        type: 'server',
+        name: data.serverName,
+        content: data.serverContent
+      }
+    )
   }
-
-  onBluePrintCreated(data:{serverName : string, serverContent : string}){
-    this.serverElements.push({
-      type: 'blueprint',
-      name: data.serverName,
-      content: data.serverContent
-    });
+  blueprintCreated(data: { serverName: string, serverContent: string }) {
+    this.serverElements.push(
+      {
+        type: 'blueprint',
+        name: data.serverName,
+        content: data.serverContent
+      }
+    )
   }
-
 }

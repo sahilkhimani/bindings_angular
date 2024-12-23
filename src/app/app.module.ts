@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ServerElementComponent } from './server-element/server-element.component';
-import { FormElementComponent } from './form-element/form-element.component';
+import { ServerFormsComponent } from './server-forms/server-forms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerElementComponent,
-    FormElementComponent,
+    ServerFormsComponent
   ],
   imports: [
     BrowserModule,

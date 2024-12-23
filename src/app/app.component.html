@@ -2,12 +2,7 @@
   <div class="row mb-3 mt-2">
     <h1>Create a Server</h1>
   </div>
-  <app-form-element
-  (serverCreated)="onServerCreated($event)"
-  (blueprintCreated)="onBluePrintCreated($event)"
-  ></app-form-element>
+  <app-server-forms (server)="serverCreated($event)" (blueprint)="blueprintCreated($event)"></app-server-forms>
   <hr>
-  <app-server-element *ngFor="let serverElement of serverElements"
-  [element]="serverElement"
-  ></app-server-element>
+  <app-server-element *ngFor="let item of serverElements" [element]="item"></app-server-element>
 </div>
